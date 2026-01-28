@@ -1,0 +1,15 @@
+TG2KSite/
+│
+├── welcome.html          ← Welcome / Home page
+├── games.html          ← Page listing non-Flowlab games/projects and ROM Hacks (.bin, .bat, .nes, etc.)
+├── fllinks.html        ← Page listing game links (Flowlab)
+├── images.html         ← Page displaying personal images 
+│
+├── /files              ← Folder containing the game & project files
+│     ├── (ex.) ghm3.bin
+│
+├── /images             ← Folder containing the images
+│     ├── (ex.) ceramicbbg.jpg
+│
+└── /css
+      └── style.css     ← Optional styling
