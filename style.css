@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+.gallery img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.logo img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 8px;
+}
