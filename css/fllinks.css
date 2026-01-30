@@ -1,0 +1,174 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #1e1f22;
+    color: #e6e6e6;
+    margin: 40px;
+}
+
+h1 {
+    margin-bottom: 5px;
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #9aa0a6;
+    margin-bottom: 30px;
+}
+
+/* Library grid */
+.library {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+/* Game card */
+.game-card {
+    position: relative;
+    background: #2b2d31;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #3a3c41;
+    transition: transform 0.2s ease;
+}
+
+/* Animated glow */
+.game-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 14px;
+    background: linear-gradient(
+        120deg,
+        #5c9cff,
+        #7cffc4,
+        #5c9cff
+    );
+    filter: blur(14px);
+    opacity: 0.2;
+    animation: breatheGlow 6s ease-in-out infinite;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+
+.game-card:hover::before {
+    opacity: 0.9;
+    animation-play-state: paused;
+}
+
+
+.game-card:hover {
+    transform: translateY(-6px) scale(1.02);
+}
+
+/* Thumbnail */
+.game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.game-card:hover img {
+    filter: brightness(1);
+    transform: scale(1.05);
+}
+
+/* Info section */
+.game-info {
+    position: relative;
+    padding: 14px 16px 18px;
+    z-index: 1;
+}
+
+.game-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.game-desc {
+    font-size: 13px;
+    color: #b5b9c0;
+}
+
+/* Game text */
+.game-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.game-desc {
+    font-size: 14px;
+    color: #b5b9c0;
+}
+
+/* Back link */
+.back {
+    display: inline-block;
+    margin-top: 30px;
+    color: #5c9cff;
+    text-decoration: none;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+
+.page-header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #2f3136;
+    padding-bottom: 20px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.subtitle {
+    margin-top: 6px;
+    font-size: 15px;
+    color: #9aa0a6;
+}
+
+@keyframes breatheGlow {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.35;
+    }
+    100% {
+        opacity: 0.15;
+    }
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #2b2d31;
+    border: 1px solid #3a3c41;
+    color: #cfd3da;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.back-button:hover {
+    background: #32353b;
+    border-color: #5c9cff;
+    transform: translateX(-3px);
+    color: #ffffff;
+}

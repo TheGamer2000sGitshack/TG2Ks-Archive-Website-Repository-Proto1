@@ -1,15 +1,72 @@
 TG2KSite/
 │
-├── welcome.html          ← Welcome / Home page
-├── games.html          ← Page listing non-Flowlab games/projects and ROM Hacks (.bin, .bat, .nes, etc.)
-├── fllinks.html        ← Page listing game links (Flowlab)
-├── images.html         ← Page displaying personal images 
+├── welcome.html                # Home / Welcome page
+├── games.html                  # Non‑Flowlab games, projects & ROM hacks
+├── fllinks.html                # Flowlab game links
+├── images.html                 # Personal image gallery
 │
-├── /files              ← Folder containing the game & project files
-│     ├── (ex.) ghm3.bin
+├── /files                      # Game & project downloads
+│     ├── Needlemouse Return to Tokyo (REV01).bin
+│     ├── NES Message.nes
+│     ├── Sonic 1 GitHub Madness 3 (Bugfix DX).bin
+│     ├── Sonic Christmas Trouble (Demo 2).bin
+│     ├── Sonic - Music From Memory.bin
+│     ├── SMB w/ Sonic Debug Font (1‑18‑25).nes
+│     ├── TG2000_CheeseOMatic.apk
+│     ├── TG2000_Food_Selection_Program.zip
+│     ├── TG2000_Numerical_Guessing_Game.apk
+│     ├── Orange Creature in Sonic Debut.bin
+│     ├── Woodling_Super_Quiz_Demo.zip
 │
-├── /images             ← Folder containing the images
-│     ├── (ex.) ceramicbbg.jpg
+├── /images                     # Image gallery assets
+│     ├── ArtPlants.jpg
+│     ├── Balloon.JPG
+│     ├── BK.jpg
+│     ├── BoardWalk.jpg
+│     ├── BoatLaunch.jpg
+│     ├── Boston.jpg
+│     ├── CCST.jpg
+│     ├── CerBBG.png
+│     ├── Clutter.jpg
+│     ├── Dawn.jpg
+│     ├── Elk.jpg
+│     ├── FairHill.jpg
+│     ├── Glass.jpg
+│     ├── Harvard.jpg
+│     ├── Lights.JPG
+│     ├── Macro.JPG
+│     ├── Mall.jpg
+│     ├── MIT.jpg
+│     ├── NewarkDE.jpg
+│     ├── NorthEast.jpg
+│     ├── Phone.JPG
+│     ├── Playground.jpg
+│     ├── Sky.jpg
+│     ├── Stairs.jpg
+│     ├── Trees.jpg
+│     ├── UD.jpg
+│     ├── Utensils.png
+│     ├── Woods.jpg
+│     ├── TG2KLogo.png
 │
-└── /css
-      └── style.css     ← Optional styling
+├── /css                        # Stylesheets
+│     ├── welcome.css           # welcome.html styles
+│     ├── games.css             # games.html styles
+│     ├── images.css            # images.html styles
+│     ├── fllinks.css           # fllinks.html styles
+│
+├── /thumbnail_fllinks           # Flowlab link thumbnails
+│     ├── dino.png
+│     ├── flappy.png
+│     ├── graduation.png
+│     ├── meteor.png
+│     ├── sonic.png
+│
+├── /sounds                     # (Optional) hover SFX for welcome page
+│
+└── /js                         # JavaScript files
+      ├── welcome.js            # welcome.html script
+      ├── games.js              # games.html script
+      ├── images.js             # images.html script
+      ├── fllinks.js            # fllinks.html script
+

@@ -1,0 +1,80 @@
+body {
+    font-family: Consolas, "Courier New", monospace;
+    margin: 40px;
+    background: #000000;
+    color: #e6e6e6;
+}
+
+h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 14px 0;
+    padding: 14px 16px;
+    background: #0b0b0b;
+    border-left: 4px solid #ffffff;
+    border-top: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+ul li:hover {
+    background: #111111;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.gallery img,
+.logo img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 0;
+    border: 1px solid #444444;
+}
+
+/* SCP terminal header */
+body::before {
+    content: "SECURE. CONTAIN. PROTECT. | TERMINAL ACCESS GRANTED";
+    display: block;
+    margin-bottom: 25px;
+    padding: 12px 16px;
+    background: #050505;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/* Back link styled as command */
+a[href="index.html"] {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 14px;
+    background: #050505;
+    border: 1px solid #ffffff;
+}
+
+a[href="index.html"]::before {
+    content: ">> ";
+}

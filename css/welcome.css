@@ -1,0 +1,219 @@
+/* Background Gradient */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+
+    /* Animated greenish-blue gradient */
+    background: linear-gradient(90deg, #00ffa6, #00c8ff, #0077ff);
+    background-size: 300% 300%;
+    animation: gradientMove 6s ease infinite;
+
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glassmorphism Container */
+.hero, nav, footer, .logo {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    animation: slideUp 0.8s ease forwards;
+}
+
+/* Slide-up
+
+/* Professional Navigation */
+/* Professional Navigation */
+.main-nav {
+    margin-top: 30px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 420px;
+}
+
+/* Nav Button Style */
+.main-nav a {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #222;
+
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 14px;
+
+    box-shadow:
+        6px 6px 14px rgba(0,0,0,0.15),
+        -6px -6px 14px rgba(255,255,255,0.6);
+
+    transition: all 0.25s ease;
+}
+
+/* Icon Styling */
+.main-nav a i {
+    font-size: 22px;
+    color: #0a4f52;
+    transition: 0.25s ease;
+}
+
+/* Hover Effects */
+.main-nav a:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow:
+        4px 4px 10px rgba(0,0,0,0.18),
+        -4px -4px 10px rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.main-nav a:hover i {
+    transform: scale(1.15);
+}
+
+/* Ripple Animation */
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.6s ease;
+    left: var(--ripple-x);
+    top: var(--ripple-y);
+}
+
+
+
+.main-nav a:hover::after {
+    transform: scale(18);
+    opacity: 0.15;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .main-nav ul {
+        max-width: 90%;
+    }
+
+    .main-nav a {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+
+    .main-nav a i {
+        font-size: 20px;
+    }
+}
+
+/* Professional Button Style */
+.main-nav a {
+    display: block;
+    padding: 14px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #222;
+
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 14px;
+
+    /* Neumorphism shadow */
+    box-shadow:
+        6px 6px 14px rgba(0,0,0,0.15),
+        -6px -6px 14px rgba(255,255,255,0.6);
+
+    transition: all 0.25s ease;
+}
+
+/* Hover Animation */
+.main-nav a:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow:
+        4px 4px 10px rgba(0,0,0,0.18),
+        -4px -4px 10px rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.45);
+}
+
+/* Active/Pressed State */
+.main-nav a:active {
+    transform: scale(0.98);
+    box-shadow:
+        inset 3px 3px 8px rgba(0,0,0,0.2),
+        inset -3px -3px 8px rgba(255,255,255,0.6);
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    .main-nav ul {
+        max-width: 90%;
+    }
+
+    .main-nav a {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+}
+
+/* Page Fade-In */
+body {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* When page is fully loaded */
+body.page-loaded {
+    opacity: 1;
+}
+
+/* Fade-Out Transition */
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
