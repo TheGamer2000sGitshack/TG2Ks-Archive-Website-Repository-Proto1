@@ -3,44 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Picture Gallery</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Images.css">
 </head>
 <body>
-    <h1>Picture Gallery</h1>
-    <p>Below are samples of my pictures, feel free to take a gander at them!</p>
-    <p>(Sourced from the TG2000 Archives.)</p>
-    <div class="gallery">
-        <img src="images/ArtPlants.jpg" alt="ArtPlants">
-        <img src="images/Balloon.JPG" alt="Balloon">
-        <img src="images/BoardWalk.jpg" alt="BoardWalk">
-        <img src="images/BK.jpg" alt="BK">
-        <img src="images/BoatLaunch.jpg" alt="Image 2">
-        <img src="images/Boston.jpg" alt="Boston">
-        <img src="images/CCST.jpg" alt="CCST">
-        <img src="images/CerBBG.png" alt="CerBBG">
-        <img src="images/Clutter.jpg" alt="Clutter">
-        <img src="images/Dawn.jpg" alt="Dawn">
-        <img src="images/Elk.jpg" alt="Elk">
-        <img src="images/FairHill.jpg" alt="FairHill">
-        <img src="images/Glass.jpg" alt="Glass">
-        <img src="images/Harvard.jpg" alt="Harvard">
-        <img src="images/Lights.JPG" alt="Lights">
-        <img src="images/Macro.JPG" alt="Macro">
-        <img src="images/Mall.jpg" alt="Mall">
-        <img src="images/MIT.jpg" alt="MIT">
-        <img src="images/NewarkDE.jpg" alt="NewarkDE">
-        <img src="images/NorthEast.jpg" alt="NorthEast">
-        <img src="images/Phone.JPG" alt="Phone">
-        <img src="images/Playground.jpg" alt="Playground">
-        <img src="images/Sky.jpg" alt="Sky">
-        <img src="images/Stairs.jpg" alt="Stairs">
-        <img src="images/Trees.jpg" alt="Trees">
-        <img src="images/UD.jpg" alt="UD">
-        <img src="images/Utensils.png" alt="Utensils">
-        <img src="images/Woods.jpg" alt="Woods">
-    </div>
 
-    <a href="index.html">← Back to Home</a>
+<div class="top-controls">
+    <a href="index.html" class="home-btn" title="Back to Home">←</a>
+
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+        <span id="themeIcon">🌙</span>
+    </button>
+</div>
+
+<h1>Picture Gallery</h1>
+<p>Below are samples of my photography.</p>
+<p>(Sourced from the TG2000 Archives)</p>
+
+<div class="gallery">
+    <img src="images/ArtPlants.jpg" alt="ArtPlants">
+    <img src="images/Balloon.JPG" alt="Balloon">
+    <img src="images/BoardWalk.jpg" alt="BoardWalk">
+    <img src="images/BK.jpg" alt="BK">
+    <img src="images/BoatLaunch.jpg" alt="Boat Launch">
+    <img src="images/Boston.jpg" alt="Boston">
+    <img src="images/CCST.jpg" alt="CCST">
+    <img src="images/CerBBG.png" alt="CerBBG">
+    <img src="images/Clutter.jpg" alt="Clutter">
+    <img src="images/Dawn.jpg" alt="Dawn">
+    <img src="images/Elk.jpg" alt="Elk">
+    <img src="images/FairHill.jpg" alt="Fair Hill">
+    <img src="images/Glass.jpg" alt="Glass">
+    <img src="images/Harvard.jpg" alt="Harvard">
+    <img src="images/Lights.JPG" alt="Lights">
+    <img src="images/Macro.JPG" alt="Macro">
+    <img src="images/Mall.jpg" alt="Mall">
+    <img src="images/MIT.jpg" alt="MIT">
+    <img src="images/NewarkDE.jpg" alt="Newark DE">
+    <img src="images/NorthEast.jpg" alt="North East">
+    <img src="images/Phone.JPG" alt="Phone">
+    <img src="images/Playground.jpg" alt="Playground">
+    <img src="images/Sky.jpg" alt="Sky">
+    <img src="images/Stairs.jpg" alt="Stairs">
+    <img src="images/Trees.jpg" alt="Trees">
+    <img src="images/UD.jpg" alt="UD">
+    <img src="images/Utensils.png" alt="Utensils">
+    <img src="images/Woods.jpg" alt="Woods">
+</div>
+
+
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="slideshow-btn" id="slideshowBtn">▶</button>
+    <span id="closeLightbox">&times;</span>
+
+    <div class="lightbox-nav prev" id="prevBtn">❮</div>
+    <img id="lightboxImg">
+    <div class="lightbox-nav next" id="nextBtn">❯</div>
+
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <div class="thumbnail-strip" id="thumbnailStrip"></div>
+</div>
+
+<script src="js/images.js"></script>
 </body>
 </html>
-
