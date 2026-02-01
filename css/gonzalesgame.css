@@ -1,0 +1,167 @@
+/* Center the whole page cleanly */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', monospace;
+  background-image: url("../images/gonzales bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  text-align: center;
+  color: black;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Transparent, blurry Game Boy frame */
+.gameboy-frame {
+  width: 700px;
+  padding: 25px 25px 40px 25px;
+
+  background: rgba(255, 255, 255, 0.15); /* transparent */
+  backdrop-filter: blur(12px);           /* frosted blur */
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 30px rgba(0,0,0,0.35),
+    0 0 0 4px rgba(255,255,255,0.2) inset;
+
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cartridge header stays centered */
+.cartridge-header {
+  width: 100%;
+  background: rgba(126, 203, 255, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border: 4px solid rgba(0, 59, 122, 0.6);
+  padding: 14px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: black;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.4) inset;
+}
+
+/* Center the content inside the frame */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Game frame with CRT overlay */
+.game-frame {
+  position: relative;
+}
+
+.crt-overlay {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.15) 0px,
+      rgba(0,0,0,0.15) 2px,
+      rgba(0,0,0,0) 3px
+    );
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+/* Keep iframe centered and crisp */
+.game-frame iframe {
+  width: 608px;
+  height: 512px;
+  border: 4px solid black;
+  image-rendering: pixelated;
+  box-shadow: 0 0 0 4px white inset;
+}
+
+/* Cream boxes centered and clean */
+.info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.cream-box {
+  width: 100%;
+  background: #fff7e1;
+  border: 6px solid #6a0dad;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Game Boy style links inside cream boxes */
+.cream-box a {
+  color: #0f380f;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 2px 4px;
+  background: #9bbc0f;
+  border: 3px solid #0f380f;
+  border-radius: 3px;
+  box-shadow: 0 3px #306230;
+  image-rendering: pixelated;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.cream-box a:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px #306230;
+}
+
+/* Back button stays centered and Game Boy styled */
+.back {
+  display: block;
+  margin: 25px auto 0 auto;
+  width: fit-content;
+
+  font-size: 12px;
+  text-decoration: none;
+  color: #0f380f;
+
+  background: #9bbc0f;
+  padding: 12px 22px;
+
+  border: 4px solid #0f380f;
+  box-shadow: 0 4px #306230;
+
+  border-radius: 4px;
+  image-rendering: pixelated;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.back:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px #306230;
+}
